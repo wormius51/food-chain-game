@@ -1,0 +1,192 @@
+
+body {
+    background-color: cornflowerblue;
+    overflow: hidden;
+}
+
+input {
+    padding-left: 5%;
+    background-color: rgb(148, 174, 197);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(53, 39, 133); 
+    width: 90%;
+}
+
+button {
+    background-color: rgb(53, 39, 133);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(8, 8, 114);
+    color: rgb(164, 189, 211);
+}
+
+select {
+    background-color: rgb(53, 39, 133);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(8, 8, 114);
+    color: rgb(164, 189, 211); 
+}
+
+.species {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-style: solid;
+    border-color: coral;
+    border-radius: 10%;
+    animation-name: producer-spawn;
+    animation-duration: 1s;
+}
+
+.up-arrow {
+    position: absolute;
+    visibility: hidden;
+    animation: bio-up 1s ease-in-out 0;
+}
+
+.down-arrow {
+    position: absolute;
+    visibility: hidden;
+    animation: bio-down 1s ease-in-out 0;
+}
+
+#chains {
+    position: absolute; 
+    bottom: 0px;
+}
+
+#ui {
+    position: fixed;
+    background-color: rgb(40, 122, 143); 
+    padding: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(8, 8, 114);
+}
+
+#chat {
+    position: fixed;
+    background-color: rgb(40, 122, 143); 
+    padding: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(8, 8, 114);
+    right: 7px;
+    height: 60%;
+    width: 20%;
+}
+
+#chatContent {
+    height: 80%;
+    background-color: rgb(148, 174, 197);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(53, 39, 133); 
+    overflow-y: auto;
+    transform: rotate(180deg);
+    direction: rtl;
+    padding: 5px;
+}
+
+#graph {
+    position: fixed;
+    right: 23%;
+    border-style: groove;
+    border-color: rgb(12, 12, 109);
+    border-radius: 10px;
+}
+
+#chatContent p {
+    transform: rotate(180deg);
+    direction: ltr;
+}
+
+::-webkit-scrollbar {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(53, 39, 133);
+    border-style: groove;
+    border-color: rgb(12, 12, 109);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(8, 8, 114);
+    border-style: groove;
+    border-color: rgb(12, 12, 109);
+}
+
+#info {
+    border-style: dashed;
+    border-color: rgb(8, 8, 114);
+}
+
+#description {
+    border-style: groove;
+    border-color: rgb(8, 8, 114);
+    background-color: rgb(53, 39, 133); 
+    padding-left: 10px;
+    color: rgb(164, 189, 211);
+    border-radius: 10px;
+}
+
+@keyframes producer-spawn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+        height: 0px;
+        width: 0px;
+    }
+    to {
+        background-color: green;
+        border-color: coral;
+        height: 128px;
+        width: 128px;
+    }
+}
+
+@keyframes consumer-spawn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+        height: 0px;
+        width: 0px;
+    }
+    to {
+        background-color: red;
+        border-color: coral;
+        height: 128px;
+        width: 128px;
+    }
+}
+
+@keyframes bio-up {
+    from {
+        content:url(/images/arrow-green.png);
+        filter: opacity(1);
+        visibility: visible;
+        bottom: 0px;
+    }
+    to {
+        content:url(/images/arrow-green.png);
+        filter: opacity(0);
+        bottom: 30px;
+    }
+}
+
+@keyframes bio-down {
+    from {
+        content:url(/images/arrow-red.png);
+        filter: opacity(1);
+        visibility: visible;
+        bottom: 0px;
+    }
+    to {
+        content:url(/images/arrow-red.png);
+        filter: opacity(0);
+        bottom: -30px;
+    }
+}
+

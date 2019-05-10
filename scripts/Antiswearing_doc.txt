@@ -1,0 +1,20 @@
+Antiswearing module by Kat_Purpy.
+
+How 2 use it: Use methods Check4Link() and Check4Swear() to check if something bad in your chats, names etc.
+
+Methods
+
+Check4Link(text) - returns true if link's detected. in other case - false
+
+Check4Swear(text) - returns true if swears are detected. in other case - false
+
+Example
+
+var AntiSwear = require("./Antiswearing");
+
+function YourGetter(usertext){
+
+if(AntiSwear.Check4Link(usertext) === true || AntiSwear.Check4Swear(usertext) === true) ExcludeThat();
+
+
+*YourGetter and ExcludeThat are just for an example

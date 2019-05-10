@@ -1,0 +1,23 @@
+CoolDown by Kat Purpy
+
+Desc: The module's used to make some cooldown
+
+Methods:
+
+SetupCoolDown(seconds) - setups cooldown in seconds. returns undefined.
+UserAction(id) - main function. call it in a method you want to be cooled down. returns seconds before countdown. if countdown is passed - returns "-1"
+
+Example:
+
+var CoolDown = require("./CoolDown");
+
+CoolDown.SetupCoolDown(20);
+
+function OnPlayerRequest(id,data){
+var TimeOut = CoolDown.UserAction(id);
+if(TimeOut != -1){
+//Do something like saying hey dude pls wait TimeOut seconds
+}
+//Do your stuff
+}
+*OnPlayerRequest is not a necessary method name

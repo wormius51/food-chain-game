@@ -1,0 +1,27 @@
+{
+  "name": "food-chain-game",
+  "version": "1.0.0",
+  "description": "A game for KRASSJAM-X",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app.js"
+  },
+  "author": "Eyal Hazor",
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/food-chain-game.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "sanitize-html": "^1.20.1",
+    "socket.io": "^2.2.0"
+  }
+}
