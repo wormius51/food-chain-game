@@ -1,2 +1,2 @@
 # food-chain-game
-A game about food chains
+A game about food chains by Wormius and Kat Purpy
